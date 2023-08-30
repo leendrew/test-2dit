@@ -1,0 +1,162 @@
+.task4 {
+  --color-font-text: #fff;
+  --color-font-text-contrast: #000;
+  --color-font-accent: #eb7979;
+  --color-bg-input: #ffffff26;
+  --color-border-input: #fff;
+  --color-bg-button: #fff;
+  --color-bg-button-hover: #ffffffd8;
+
+  --font-fs-title: 70px;
+  --font-fw-title: bold;
+  --font-lh-title: 105%;
+  --font-fs-subtitle: 18px;
+  --font-fw-subtitle: normal;
+  --font-lh-subtitle: 150%;
+  --font-fs-text: 16px;
+  --font-fw-text: normal;
+  --font-lh-text: 150%;
+  --font-fs-description: 14px;
+  --font-fw-description: normal;
+  --font-lh-description: 150%;
+
+  background-image: url('../images/task-4-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.task4 .container {
+  max-width: 1160px;
+  padding: 0 10px;
+}
+
+.task4 .task4__inner {
+  padding: 200px 0;
+  color: var(--color-font-text);
+}
+
+.task4 .block__title {
+  font-size: var(--font-fs-title);
+  font-weight: var(--font-fw-title);
+  line-height: var(--font-lh-title);
+}
+
+.task4 .block__subtitle {
+  font-size: var(--font-fs-subtitle);
+  font-weight: var(--font-fw-subtitle);
+  line-height: var(--font-lh-subtitle);
+}
+
+.task4 .block__form {
+  margin-top: 20px;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
+}
+
+.task4 .form__item {
+  height: fit-content;
+  position: relative;
+}
+
+.task4 .form__item.show-error {
+  outline: 2px solid var(--color-functional-error);
+}
+
+.task4 .check {
+  grid-column: span 2;
+}
+
+.task4 .form__input {
+  background-color: var(--color-bg-input);
+  color: var(--color-font-text);
+  padding: 13px 30px;
+  height: fit-content;
+  border: 1px solid var(--color-border-input);
+  width: 100%;
+}
+
+.task4 input::placeholder {
+  color: var(--color-font-text);
+}
+
+.task4 .error {
+  display: none;
+  color: var(--color-functional-error);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transform: translate(0, 100%);
+}
+
+.task4 .form__item.show-error .error {
+  display: inline-block;
+}
+
+.task4 .phone {
+  background-color: var(--color-bg-input);
+  color: var(--color-font-text);
+  padding: 13px 30px;
+  height: fit-content;
+  border: 1px solid var(--color-border-input);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.task4 .form__input:focus,
+.task4 .phone.focus,
+.task4 .submit:focus {
+  outline: 2px solid #fff;
+}
+
+.task4 .phone__input {
+  background-color: transparent;
+  color: var(--color-font-text);
+  border: none;
+  outline: none;
+}
+
+.task4 .phone__icon {
+  display: none;
+  width: 24px;
+  height: 17px;
+  margin-right: 12px;
+}
+
+.task4 .phone__icon.show {
+  display: inline-block;
+}
+
+.task4 .check__rules {
+  color: var(--color-font-accent);
+  cursor: pointer;
+}
+
+.task4 .submit {
+  color: var(--color-font-text-contrast);
+  background-color: var(--color-bg-button);
+  padding: 13px 30px;
+  cursor: pointer;
+}
+
+.task4 .submit:hover {
+  background-color: var(--color-bg-button-hover);
+}
+
+@media (max-width: 890px) {
+  .task4 .check {
+    grid-column: auto;
+  }
+
+  .task4 .submit {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 590px) {
+  .task4 .submit {
+    grid-column: auto;
+  }
+}

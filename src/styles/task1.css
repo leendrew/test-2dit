@@ -1,0 +1,127 @@
+.task1 {
+  --color-bg-surface: #fff;
+  --color-bg: #fff;
+  --color-font-primary: #283c63;
+  --color-font-secondary: #5b5b5b;
+  --color-border: #c6cdda;
+
+  --font-fs-title: 34px;
+  --font-fw-title: normal;
+  --font-lh-title: 130%;
+  --font-fs-subtitle: 15px;
+  --font-fw-subtitle: bold;
+  --font-lh-subtitle: 140%;
+  --font-fs-text: 16px;
+  --font-fw-text: normal;
+  --font-lh-text: 150%;
+
+  --animation-duration: 0.4s;
+  --animation-function: ease-in-out;
+
+  background-color: var(--color-bg-surface);
+}
+
+.task1 .task1__inner {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 50px 0;
+}
+
+.task1 .inner__item {
+  flex-basis: 50%;
+}
+
+.task1 .text__title {
+  font-size: var(--font-fs-title);
+  font-weight: var(--font-fw-title);
+  line-height: var(--font-lh-title);
+  color: var(--color-font-primary);
+}
+
+.task1 .text__paragraph {
+  font-size: var(--font-fs-text);
+  font-weight: var(--font-fw-text);
+  line-height: var(--font-lh-text);
+  color: var(--color-font-secondary);
+  margin-top: 30px;
+}
+
+.task1 .text__paragraph:not(:first-child) {
+  margin-top: 25px;
+}
+
+.task1 .accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.task1 .accordion__panel {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  padding: 20px 30px;
+  cursor: pointer;
+}
+
+.task1 .accordion__panel:not(:first-child) {
+  margin-top: 20px;
+}
+
+.task1 .panel__header {
+  display: flex;
+  align-items: center;
+}
+
+.task1 .header__title {
+  flex-grow: 1;
+  font-size: var(--font-fs-subtitle);
+  font-weight: var(--font-fw-subtitle);
+  line-height: var(--font-lh-subtitle);
+  color: var(--color-font-primary);
+}
+
+.task1 .header__arrow {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.task1 .arrow__icon {
+  width: 10px;
+  height: 10px;
+  transition: transform var(--animation-duration) var(--animation-function);
+}
+
+.task1 .panel.active .arrow__icon {
+  transform: rotate(180deg);
+}
+
+.task1 .panel__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--animation-duration) var(--animation-function);
+}
+
+.task1 .panel.active .panel__content {
+  grid-template-rows: 1fr;
+}
+
+.task1 .content__inner {
+  overflow: hidden;
+}
+
+.task1 .content__text {
+  margin: 15px 0 0 0;
+  font-size: var(--font-fs-text);
+  font-weight: var(--font-fw-text);
+  line-height: var(--font-lh-text);
+  color: var(--color-font-secondary);
+}
+
+@media (max-width: 576px) {
+  .task1 .task1__inner {
+    flex-direction: column;
+  }
+}

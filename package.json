@@ -1,0 +1,9 @@
+{
+  "name": "test-2dit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx browser-sync start --no-notify --no-ui --server --watch 'index.html,./src/styles/**/*.css,./src/images/*,./src/scripts/**/*.js'"
+  }
+}
